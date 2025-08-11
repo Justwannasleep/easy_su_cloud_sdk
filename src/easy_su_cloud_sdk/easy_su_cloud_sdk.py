@@ -104,7 +104,9 @@ class EasySuCloudHelper(EasySuCloudClient):
         if self._heartbeat_thread and self._heartbeat_thread.is_alive():
             self.stop_heartbeat()
         self._heartbeat_stop_event.clear()  # 重置事件标志
-        self._heartbeat_thread = threading.Thread(target=self._jump_heartbeat)
+        self._heartbeat_thread = threading.Thread(
+            target=self._jump_heartbeat, daemon=True
+        )
         self._heartbeat_thread.start()
         return self._heartbeat_thread
 
