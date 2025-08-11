@@ -1,5 +1,5 @@
 from loguru import logger
-from src.easysu_cloud_helper import EasySuCloudHelper
+from src.easy_su_cloud_sdk import EasySuCloudHelper
 from src.common.models import ApiHeartbeat
 from src.helper.logger import init_sdk_logger
 import time

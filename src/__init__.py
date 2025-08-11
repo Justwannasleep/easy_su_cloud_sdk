@@ -1,3 +1,3 @@
 __all__ = ["EasySuCloudHelper"]
 
-from .easysu_cloud_helper import EasySuCloudHelper
+from .easy_su_cloud_sdk import EasySuCloudHelper
