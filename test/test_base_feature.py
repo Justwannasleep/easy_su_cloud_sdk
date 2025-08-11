@@ -1,7 +1,7 @@
 from loguru import logger
-from src.easy_su_cloud_sdk import EasySuCloudHelper
-from src.common.models import ApiHeartbeat
-from src.helper.logger import init_sdk_logger
+from easy_su_cloud_sdk.easy_su_cloud_sdk import EasySuCloudHelper
+from easy_su_cloud_sdk.common.models import ApiHeartbeat
+from easy_su_cloud_sdk.helper.logger import init_sdk_logger
 import time
 
 
@@ -57,7 +57,7 @@ class TestBaseFeature:
 
     @staticmethod
     def test_ver_is_low():
-        from src.common.models import ApiLastVersion
+        from easy_su_cloud_sdk.common.models import ApiLastVersion
 
         TestBaseFeature.easy_sdk = EasySuCloudHelper(
             protocol="https",
@@ -94,7 +94,7 @@ class TestBaseFeature:
             heartbeat_interval=6,
         )
 
-        from src.common.models import ApiLastVersion
+        from easy_su_cloud_sdk.common.models import ApiLastVersion
 
         ver = "0.7.1"
 
