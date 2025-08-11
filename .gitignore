@@ -5,7 +5,7 @@
 # 编译环境
 build/
 dist/
-
+src/*.egg-info
 # 缓存
 cache/
 
