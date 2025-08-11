@@ -2,12 +2,6 @@
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-<<<<<<< HEAD
-[tool.setuptools]
-packages = ["easy_su_cloud_sdk"]  # 直接指向根目录下的包
-
-=======
->>>>>>> 850b78d (项目结构调整为src布局)
 [project]
 name = "easy_su_cloud_sdk"
 version = "2025.08.11"
@@ -29,3 +23,7 @@ test = ["pytest>=8.4.1"]
 [project.urls]
 Homepage = "https://github.com/Justwannasleep/easy_su_cloud_sdk"
 Repository = "https://github.com/Justwannasleep/easy_su_cloud_sdk"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["test"]
