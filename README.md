@@ -33,3 +33,56 @@ None:
 ```
 
 
+# 调用示例
+1. 初始化sdk
+```python
+from easy_su_cloud_sdk import EasySuCloudHelper
+easy_sdk = EasySuCloudHelper(
+    protocol="https",
+    host_addr="api.easysu.com",
+    port=443,
+    app_key="",
+    app_secret="",
+    cd_key=cdkey,
+    heartbeat_interval=60,
+)
+```
+
+2. 定义和注册事件回调
+```python
+def hook(data, *args, **kwargs):
+    logger.info(f"login success: {data}")
+    assert data["code"] == 10304
+
+easy_sdk.register_event_listener(
+            ApiLastVersion.event_name, hook
+        )
+```
+
+
+
+3. CDK登录
+```python
+easy_sdk.login()
+```
+
+4. 开始心跳
+```python
+easy_sdk.keep_heartbeat()
+```
+
+# 手动停止
+1. 手动停止心跳
+    1. 调用 `stop_heartbeat` 方法停止心跳，该方法会返回一个 `bool` 值的数据，
+        表示是否成功停止心跳。通常会在最后1次心跳调用后返回。
+        ```python
+        while TestBaseFeature.easy_sdk.stop_heartbeat():
+            time.sleep(1)
+        ```
+
+2. 手动登出
+    1. 调用 `logout` 方法手动登出。
+    2. 等待 `ApiLogout` 事件触发，确认登出成功。
+
+
+
