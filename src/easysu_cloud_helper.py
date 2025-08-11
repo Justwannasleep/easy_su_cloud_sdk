@@ -2,8 +2,8 @@
 import time
 import uuid
 import threading
-from src.core.easy_su_cloud_client import EasySuCloudClient
-from src.decorators.event_listener import event_listener
+from .core.easy_su_cloud_client import EasySuCloudClient
+from .decorators.event_listener import event_listener
 
 
 from .common.models import (

@@ -5,8 +5,8 @@ from requests.sessions import (
 from typing import Any, TypeAlias
 import requests
 from hashlib import md5
-from src.utils.device import get_device_code
-from src.decorators.event_listener import event_listener
+from .utils.device import get_device_code
+from .decorators.event_listener import event_listener
 
 
 Incomplete: TypeAlias = Any

@@ -1,9 +1,8 @@
 from loguru import logger
 from src.easysu_cloud_helper import EasySuCloudHelper
 from src.common.models import ApiHeartbeat
-import time
-
 from src.helper.logger import init_sdk_logger
+import time
 
 
 class TestBaseFeature:
