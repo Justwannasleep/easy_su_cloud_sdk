@@ -1,0 +1,22 @@
+# IDE
+.vscode/
+.idea/
+
+# 编译环境
+build/
+dist/
+
+# 缓存
+cache/
+
+# Python-依赖管理
+uv.lock
+
+# python-环境
+__pyc__
+__pycache__/
+
+# 项目文件
+logs
+test.py
+config.yaml
