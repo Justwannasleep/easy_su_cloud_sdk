@@ -1,11 +1,13 @@
 [project]
 name = "easy-su-cloud-sdk"
-version = "1.0.0"
+version = "2025.08.11"
+authors = [
+  { name = "Justwannasleep", email = "linhao3389@outlook.com" }
+]
 description = "易速云SDK"
 readme = "README.md"
+
 requires-python = ">=3.12"
-homepage = "https://github.com/Justwannasleep/easy_su_cloud_sdk"
-repository = { url = "https://github.com/Justwannasleep/easy_su_cloud_sdk.git" }
 dependencies = [
     "loguru>=0.7.3",
     "pydantic>=2.11.7",
@@ -13,6 +15,13 @@ dependencies = [
     "requests>=2.32.4",
 ]
 
+
+[project.urls]
+"Homepage" = "https://github.com/Justwannasleep/easy_su_cloud_sdk"
+"Repository" = "https://github.com/Justwannasleep/easy_su_cloud_sdk"
+
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+
