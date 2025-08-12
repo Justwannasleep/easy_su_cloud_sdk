@@ -48,7 +48,9 @@ class EasySuCloudHelper(EasySuCloudClient):
         req = self._http_client(
             method=method, url=path, json=req_data.model_dump(), verify=False
         )
-        self._token = req["result"]["token"]
+        if req["code"] == 0 and req.get("result"):
+            self._token = req["result"].get("token")
+
         return req
 
     @event_listener.event_listener(ApiHeartbeat.event_name)
