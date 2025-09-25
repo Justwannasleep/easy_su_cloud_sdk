@@ -36,6 +36,9 @@ class EasySuCloudHelper(EasySuCloudClient):
     # def async_card_login(self, card, device_id):
     #     return self.keep_heart(self.card_login, card, device_id)
 
+    def update_card(self, card):
+        self._card = card
+
     @event_listener.event_listener(ApiLogin.event_name)
     def req_card_login(self) -> dict:
         req_data: RequestLoginData = RequestLoginData(

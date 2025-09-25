@@ -27,7 +27,10 @@ class EasySuCloudClient(requests.Session):
     ) -> None:
         self._set_interface_prefix(protocol=protocol, host_addr=host_addr, port=port)
         self._set_app_info(
-            app_key=app_key, app_secret=app_secret, cd_key=cd_key, heartbeat_interval=60
+            app_key=app_key,
+            app_secret=app_secret,
+            cd_key=cd_key,
+            heartbeat_interval=heartbeat_interval,
         )
         super().__init__()
 
